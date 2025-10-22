@@ -36,8 +36,8 @@ Follow these steps to set up and run the ETL pipeline on your local machine.
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/Dungpham0703/gold_etl_pipeline.git
-cd gold_etl_pipeline
+git clone https://github.com/Dungpham0703/automated_gold_pipeline.git
+cd automated_gold_pipeline
 ```
 ### 2️⃣ Create a Google App Password (for Gmail)
 
