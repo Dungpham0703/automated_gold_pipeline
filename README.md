@@ -18,23 +18,22 @@ It automatically **extracts**, **transforms**, and **loads** daily gold price da
 
 ## 📂 Project Structure
 
-.
 ├── config/
-│ └── airflow.cfg
+│ └── airflow.cfg # Airflow configuration file
 │
 ├── dags/
-│ └── gold_data_dag.py # Airflow DAG 
+│ └── gold_data_dag.py # Main Airflow DAG (Extract → Transform → Load)
 │
 ├── src/
-│ ├── config.py # Load env variables
-│ ├── extract.py # Fetch data from API
-│ ├── transform.py # Clean & format data
-│ ├── load.py # Send to email
-│ └── main.py # Just for testing the ETL
+│ ├── config.py # Load environment variables
+│ ├── extract.py # Fetch data from GoldAPI
+│ ├── transform.py # Clean & format the raw data
+│ ├── load.py # Send processed data to DB / email
+│ └── main.py # For manual ETL testing
 │
-├── docker-compose.yaml # Docker setup for Airflow
-├── .env # Just the example environment variables =))
-└── README.md
+├── docker-compose.yaml # Docker setup for Airflow services
+├── .env.example # Example environment variables file
+└── README.md # Project documentation
 
 ---
 
