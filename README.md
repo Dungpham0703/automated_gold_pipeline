@@ -39,8 +39,33 @@ Follow these steps to set up and run the ETL pipeline on your local machine.
 git clone https://github.com/Dungpham0703/gold_etl_pipeline.git
 cd gold_etl_pipeline
 ```
+### 2️⃣ Create a Google App Password (for Gmail)
 
-### 2️⃣ Set Up Environment Variables
+Since Gmail no longer allows direct SMTP login with your normal password,  
+you must create a **Google App Password** to let Airflow send emails securely.
+
+Follow these steps:
+
+1. Go to **Google Account → Security → 2-Step Verification**  
+   👉 [https://myaccount.google.com/security](https://myaccount.google.com/security)
+
+2. Turn on **2-Step Verification**.
+
+3. Then open **App Passwords**  
+   👉 [https://myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)
+
+4. Choose:
+   - **App:** Other (Custom name) → type `Gold_ETL_Pipeline`
+   - **Device:** Your computer
+
+5. Click **Generate**, copy the 16-character password Google gives you.
+
+6. Paste it into your `.env` file like this:
+   ```env
+   GMAIL_USER=youremail@gmail.com
+   GMAIL_PASSWORD=abcd efgh ijkl mnop
+   
+### 3️⃣ Set Up Environment Variables
 ```bash
 GOLD_API_URL=https://www.goldapi.io/api/XAU/USD
 GOLD_API_KEY= get_your_api_key_at_https://www.goldapi.io/dashboard
@@ -48,7 +73,7 @@ AIRFLOW_UID=50000
 GMAIL_USER=your_email@gmail.com
 GMAIL_PASSWORD=your_app_password
 ```
-### 3️⃣ Start Airflow with Docker
+### 4️⃣ Start Airflow with Docker
 Running the Docker then:
 ```bash
 docker compose up -d
@@ -59,13 +84,15 @@ Default credentials:
 Username: airflow
 Password: airflow
 ```
-### 4️⃣ Run the DAG
+### 5️⃣ Run the DAG
 
-Open Airflow, find the DAG named gold_data_dag, and trigger it manually.
+Open Airflow, find the DAG named gold_data_dag, and trigger it manually and you will know how high gold price is through email.
 
 Each task performs the following:
 
-### 5️⃣ Stop All Containers
+Extract data from API -> Transform with pandas -> Send CSV file to your email.
+
+### 6️⃣ Stop All Containers
 
 Stop the Airflow environment cleanly:
 ```bash
