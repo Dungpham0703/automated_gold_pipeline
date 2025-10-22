@@ -28,7 +28,7 @@ automated_gold_pipeline/
 ├── docker-compose.yaml   # Docker setup for Airflow services
 ├── .env                  # Just example, not real environment variables
 └── README.md             # Documentation
-
+```
 ---
 
 ## 🚀 Getting Started
@@ -40,8 +40,17 @@ Follow these steps to set up and run the ETL pipeline on your local machine.
 ```bash
 git clone https://github.com/Dungpham0703/gold_etl_pipeline.git
 cd gold_etl_pipeline
+```
 
 ### 2️⃣ Set Up Environment Variables
 ```bash
 cp .env .env
-
+```
+Then open .env and fill in your real values:
+```bash
+GOLD_API_URL=https://www.goldapi.io/api/XAU/USD
+GOLD_API_KEY=your_api_key_here
+AIRFLOW_UID=50000
+GMAIL_USER=youremail@gmail.com
+GMAIL_PASSWORD=your_app_password
+```
