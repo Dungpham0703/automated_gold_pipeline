@@ -23,9 +23,25 @@ The project is organized for clarity and modularity:
 ```bash
 automated_gold_pipeline/
 ├── config/               # Airflow configuration
-├── dags/                 # DAG definition for ETL
+├── dags/                 # gold DAG
 ├── src/                  # ETL scripts (extract, transform, load)
 ├── docker-compose.yaml   # Docker setup for Airflow services
-├── .env.example          # Example environment variables
+├── .env                  # Just example, not real environment variables
 └── README.md             # Documentation
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to set up and run the ETL pipeline on your local machine.
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/Dungpham0703/gold_etl_pipeline.git
+cd gold_etl_pipeline
+
+### 2️⃣ Set Up Environment Variables
+```bash
+cp .env .env
 
