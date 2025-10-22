@@ -2,15 +2,13 @@
 
 An automated **ETL pipeline** built using **Apache Airflow** and **Docker Compose**, designed to fetch, transform, and deliver **daily gold price data** directly to your email inbox 📧.
 
-This project is ideal for practicing **Data Engineering**, **ETL orchestration**, and **workflow automation** using real-world tools.
-
 ---
 
 ## ✨ Key Features
 
 * 🕒 **Automated Scheduling** — The pipeline runs daily through Apache Airflow.
 * 🌐 **API Integration** — Fetches live gold price data from [GoldAPI.io](https://www.goldapi.io/).
-* 🧮 **Data Transformation** — Cleans and formats JSON data into a structured CSV using `pandas`.
+* 🧮 **Data Transformation** — Cleans and formats JSON data into a structured CSV using pandas.
 * 📧 **Email Automation** — Sends the processed CSV to your Gmail inbox via SMTP.
 * 🐳 **Containerized Setup** — Runs entirely in Docker Compose for easy deployment and portability.
 
@@ -44,13 +42,35 @@ cd gold_etl_pipeline
 
 ### 2️⃣ Set Up Environment Variables
 ```bash
-cp .env .env
-```
-Then open .env and fill in your real values:
-```bash
 GOLD_API_URL=https://www.goldapi.io/api/XAU/USD
-GOLD_API_KEY=your_api_key_here
+GOLD_API_KEY= get_your_api_key_at_https://www.goldapi.io/dashboard
 AIRFLOW_UID=50000
-GMAIL_USER=youremail@gmail.com
+GMAIL_USER=your_email@gmail.com
 GMAIL_PASSWORD=your_app_password
 ```
+### 3️⃣ Start Airflow with Docker
+Running the Docker then:
+```bash
+docker compose up -d
+```
+After setup completes, open Airflow in your browser at localhost:8080
+Default credentials:
+```bash
+Username: airflow
+Password: airflow
+```
+### 4️⃣ Run the DAG
+
+Open Airflow, find the DAG named gold_data_dag, and trigger it manually.
+
+Each task performs the following:
+
+### 5️⃣ Stop All Containers
+
+Stop the Airflow environment cleanly:
+```bash
+docker compose down
+```
+
+
+load_task → Sends the cleaned CSV to your Gmail inbox
