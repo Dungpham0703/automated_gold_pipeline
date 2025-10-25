@@ -28,6 +28,9 @@ automated_gold_pipeline/
 └── README.md             # Documentation
 ```
 ---
+## Data Flow Diagram
+<img width="1857" height="926" alt="image" src="https://github.com/user-attachments/assets/42ffb2e1-d022-4c5a-ac83-917213ab660d" />
+
 
 ## 🚀 Getting Started
 
