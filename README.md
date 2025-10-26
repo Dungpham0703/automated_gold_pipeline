@@ -1,6 +1,6 @@
 # 🪙 Automated Gold Data Pipeline (Airflow + Docker)
 
-An automated **ETL pipeline** built using **Apache Airflow** and **Docker Compose**, designed to fetch, transform, and deliver **daily gold price data** directly to your email inbox 📧.
+An automated **ETL pipeline** built using **Apache Airflow** and **Docker Compose**, designed to fetch, transform, and deliver **daily gold price data** directly to your email inbox.
 
 ---
 
