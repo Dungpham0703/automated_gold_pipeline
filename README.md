@@ -81,7 +81,7 @@ Running the Docker and then:
 ```bash
 docker compose up -d
 ```
-After setup completes, open Airflow in your browser at localhost:8080
+After setup completes, open Airflow in your browser at localhost:8080.
 Default credentials:
 ```bash
 Username: airflow
