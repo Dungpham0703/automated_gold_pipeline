@@ -1,0 +1,17 @@
+{"timestamp":"2025-10-21T00:23:58.721990Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-10-21T00:23:58.726095Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/gold_data_dag.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-10-21T00:23:58.866062Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/gold_data_dag.py","lineno":7,"logger":"py.warnings"}
+{"timestamp":"2025-10-21T00:23:59.256310Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-10-21T00:23:59.256858Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-10-21T00:23:59.257229Z","level":"info","event":"Current task name:extract_task","logger":"task.stdout"}
+{"timestamp":"2025-10-21T00:23:59.257534Z","level":"info","event":"Dag name:gold_etl_pipeline","logger":"task.stdout"}
+{"timestamp":"2025-10-21T00:23:59.258810Z","level":"info","event":"Fetching gold data for date: 20251020","logger":"task.stdout"}
+{"timestamp":"2025-10-21T00:24:00.095602Z","level":"info","event":"                       date      timestamp  ... price_gram_14k price_gram_10k","logger":"task.stdout"}
+{"timestamp":"2025-10-21T00:24:00.096693Z","level":"info","event":"0  2025-10-20T09:30:00.000Z  1760952600000  ...        79.7586        56.9705","logger":"task.stdout"}
+{"timestamp":"2025-10-21T00:24:00.097145Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-10-21T00:24:00.097559Z","level":"info","event":"[1 rows x 17 columns]","logger":"task.stdout"}
+{"timestamp":"2025-10-21T00:24:00.097925Z","level":"info","event":"Extracted 1 row(s) from https://www.goldapi.io/api/XAU/USD/20251020","logger":"task.stdout"}
+{"timestamp":"2025-10-21T00:24:00.114329Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":218}
+{"timestamp":"2025-10-21T00:24:00.141793Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-10-21T00:24:00.142956Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-10-21T00:24:00.147793Z","level":"info","event":"Task operator:<Task(PythonOperator): extract_task>","logger":"task.stdout"}
